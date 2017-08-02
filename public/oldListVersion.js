@@ -39,7 +39,7 @@ var populateSelect = function(beers){
     var li = document.createElement('h2');
     li.innerText = beer.name;
     ul.appendChild(li);
-
+    
     var urlLi = document.createElement('p');
     var image = new Image(80);
     image.src = beer.image_url;
@@ -58,5 +58,33 @@ var populateSelect = function(beers){
 
   });
 }
+
+
+
+// var populateList = function(beers){
+//   var ul = document.getElementById('beer-list');
+//   beers.forEach(function(beer){
+//     var li = document.createElement('h2');
+//     li.innerText = beer.name;
+//     ul.appendChild(li);
+
+//     var urlLi = document.createElement('li');
+//     var image = new Image(80);
+//     image.src = beer.image_url;
+//     urlLi.appendChild(image);
+//     ul.appendChild(urlLi);
+
+//     var ingredientsLi = document.createElement('li');
+
+//     beer.ingredients.malt.forEach(function(ingredient){
+//       var ingLi = document.createElement('li');
+//       ingLi.innerText = ingredient.name;
+//       ingredientsLi.appendChild(ingLi);
+//     })
+
+//     ul.appendChild(ingredientsLi);
+
+//   })
+// }
 
 window.addEventListener('load', app);
