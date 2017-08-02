@@ -21,7 +21,7 @@ var requestComplete = function(){
 var populateList = function(beers){
   var ul = document.getElementById('beer-list');
   beers.forEach(function(beer){
-    var li = document.createElement('li');
+    var li = document.createElement('h2');
     li.innerText = beer.name;
     ul.appendChild(li);
 
@@ -30,6 +30,17 @@ var populateList = function(beers){
     image.src = beer.image_url;
     urlLi.appendChild(image);
     ul.appendChild(urlLi);
+
+    var ingredientsLi = document.createElement('li');
+
+    beer.ingredients.malt.forEach(function(ingredient){
+      var ingLi = document.createElement('li');
+      ingLi.innerText = ingredient.name;
+      ingredientsLi.appendChild(ingLi);
+    })
+
+    ul.appendChild(ingredientsLi);
+
   })
 }
 
